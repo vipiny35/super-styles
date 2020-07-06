@@ -56,7 +56,7 @@ $(function() {
 					{ code: "var css = '"+ addslashes(localStorage[host + '-css'].replace(/(\r\n|\n|\r)/gm,"")) +"';", runAt: 'document_start' },
 					{ code: "var js = '"+ addslashes(localStorage[host + '-js'].replace(/(\r\n|\n|\r)/gm,"")) +"';", runAt: 'document_start' },
 					{ file: "jquery.js", runAt: 'document_start' },
-					{ file: "styler.js", runAt: 'document_start' }
+					{ file: "superstyles.js", runAt: 'document_start' }
 				]
 			);
 		});
