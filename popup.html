@@ -1,0 +1,130 @@
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="/lib/codemirror.css">
+	<script src="jquery.js"></script>
+	<script src="functions.js"></script>
+	<script src="script.js"></script>
+	<script src="/lib/codemirror.js"></script>
+
+	<script src="/mode/javascript/javascript.js"></script>
+	<script src="/mode/css/css.js"></script>
+
+	<style>
+		body {
+			font-family: Segoe UI, sans-serif;
+			font-size: 14px;
+			margin: 0
+		}
+
+		.host {
+			padding: 10px;
+			background: #333;
+			color: #eee;
+			font-weight: 500;
+		}
+
+		textarea {
+			width: 100%;
+		}
+
+		.codeMirror {
+			height: 200px;
+			border: 1px solid #eee;
+		}
+
+		.cm-s-csscm,
+		.cm-s-jscm {
+			position: relative;
+		}
+
+		.cm-s-csscm:hover:after,
+		.cm-s-jscm:hover:after {
+			/* display: none; */
+		}
+
+		.cm-s-csscm:after,
+		.cm-s-jscm:after {
+			pointer-events: none;
+			color: #eee;
+			content: 'CSS';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 50px;
+			margin: -25px 0 0 15px;
+			font-family: Segoe UI, sans-serif;
+		}
+
+		.cm-s-jscm:after {
+			content: 'JS';
+		}
+
+		label {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+		}
+
+		input[type='checkbox'] {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 3px;
+			padding: 0;
+		}
+
+		.width,
+		.height,
+		.fontsize {
+			font-size: 12px;
+			vertical-align: middle;
+			margin: 0 3px;
+			width: 40px;
+			text-align: center;
+		}
+
+		.separator {
+			height: 10px;
+			width: 1px;
+			display: inline-block;
+			margin: 0px 10px;
+			background-color: #F77F50;
+		}
+
+		.action-buttons {
+			padding: 0px 0 0 10px;
+			position: relative;
+			background: #333;
+			color: #eee;
+			font-weight: 500;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div>
+
+		<textarea class='css' id='css' placeholder='CSS'></textarea>
+		<textarea class='js' id='js' placeholder='JavaScript'></textarea>
+
+		<div class="action-buttons">
+
+			<label for='wrap'>Word wrap</label>
+			<input type='checkbox' class='wrap' name='wrap' value='1' id='wrap'> <span class="separator"></span>
+
+			<label for='width'>Width</label>
+			<input type='text' class='width' name='width' id='width' value='550' title='In pixels'> (px) <span
+				class="separator"></span>
+
+			<label for='fontsize'>Font size</label>
+			<input type='text' class='fontsize' name='fontsize' id='fontsize' value='14px' title='In pixels'> (px)
+		</div>
+
+
+	</div>
+
+</body>
